@@ -34,7 +34,7 @@ python encode.py\
 #### 注意:
 1. Excel .xls檔格式
 ![](https://i.imgur.com/Qi3KxGE.png)
-2. ==每個圖片的檔名需要與staff_cd一樣==
+2. **每個圖片的檔名需要與staff_cd一樣**
 
 
 
