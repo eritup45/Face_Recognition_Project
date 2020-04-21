@@ -137,5 +137,5 @@ dmypy.json
 # customized
 
 settings.json
-Release/
-face_recognition_models/
+# Release/
+# face_recognition_models/
