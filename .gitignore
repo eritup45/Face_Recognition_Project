@@ -136,6 +136,7 @@ dmypy.json
 
 # customized
 
+.vscode/
 settings.json
 # Release/
 # face_recognition_models/
