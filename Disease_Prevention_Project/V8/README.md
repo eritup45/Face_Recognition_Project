@@ -3,26 +3,27 @@
 > 因為資料敏感，所以不提供資料
 
 ## 執行環境:
-Win10, python=3.6
+**Win10**, python=3.6
 
 ## 安裝步驟:
-(因為電腦問題environment無法匯出，所以手動安裝package)
+(因為電腦問題environment無法匯出，所以使用批次檔安裝)
+### 請用powershell執行以下指令
 ```powershell=
-conda install -c conda-forge opencv
+./my_requirements.bat
+```
 
+### 或是手動安裝package
+```powershell=
+pip install cmake
 # 到https://pypi.org/simple/dlib/	下載dlib-19.8.1-cp36-cp36m-win_amd64.whl
 wget https://files.pythonhosted.org/packages/0e/ce/f8a3cff33ac03a8219768f0694c5d703c8e037e6aba2e865f9bae22ed63c/dlib-19.8.1-cp36-cp36m-win_amd64.whl#sha256=794994fa2c54e7776659fddb148363a5556468a6d5d46be8dad311722d54bfcf
 pip install dlib-19.8.1-cp36-cp36m-win_amd64.whl
 
 pip install face_recognition
+pip install easygui
+conda install -c conda-forge opencv
 conda install -c conda-forge psutil
 conda install -c conda-forge dataclasses
-pip install easygui
-```
-
-#### 或是試試看引入環境
-```powershell=
-conda env create -f Face_Recognition_Project\Disease_Prevention_Project\V8\environment.yml
 ```
 
 ## 執行步驟：
