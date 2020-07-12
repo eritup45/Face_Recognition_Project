@@ -26,7 +26,7 @@ conda env create -f Face_Recognition_Project\Disease_Prevention_Project\V8\envir
 
 ## 執行步驟：
 
-### 創建.db擋
+### 創建.db檔，與將image以dlib格式編碼
 ```powershell=
 python encode.py\
 --image [PATH/TO/IMAGE_DIRECTORY]\
@@ -39,9 +39,6 @@ python encode.py\
 ![](https://i.imgur.com/Qi3KxGE.png)
 2. **每個圖片的檔名需要與staff_cd一樣**
 
-
-
-### 
 
 ### 開啟臉部辨識
 1. 移動到目的資料夾
@@ -59,7 +56,7 @@ python video_demo.py [PATH]
 EX.
 
 ```powershell=
-python .\video_demo.py D:\大三\專題\防疫專案\Others\Bear_Face_Project\Disease_Prevention_Project\V7
+python .\video_demo.py D:\大三\專題\防疫專案\Others\Bear_Face_Project\Disease_Prevention_Project\V
 ```
 
 #### 注意：
