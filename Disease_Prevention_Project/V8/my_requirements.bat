@@ -9,6 +9,7 @@ pip install easygui
 pip install psutil
 pip install dataclasses
 pip install opencv-python
+pip install comtypes
 
 echo 'All package Installed'
 pause
