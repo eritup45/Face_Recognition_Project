@@ -21,6 +21,7 @@ pip install dlib-19.8.1-cp36-cp36m-win_amd64.whl
 
 pip install face_recognition
 pip install easygui
+pip install comtypes
 conda install -c conda-forge opencv
 conda install -c conda-forge psutil
 conda install -c conda-forge dataclasses
