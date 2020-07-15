@@ -7,12 +7,12 @@
 
 ## 安裝步驟:
 (因為電腦問題environment無法匯出，所以使用批次檔安裝)
-### 請用powershell執行以下指令
+### 法1.請用powershell執行以下指令
 ```powershell=
 ./my_requirements.bat
 ```
 
-### 或是手動安裝package
+### 法2.或是手動安裝package
 ```powershell=
 pip install cmake
 # 到https://pypi.org/simple/dlib/	下載dlib-19.8.1-cp36-cp36m-win_amd64.whl
