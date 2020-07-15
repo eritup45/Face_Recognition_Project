@@ -14,6 +14,7 @@ def get_file_path():
         return sys.argv[1]
     # Use as debug
     else:
+        print('Do not get sys.argv[1]. Use parent folder as sys.argv[1].')
         return str(Path(__file__).parent)
     # try:
     #     this_file = __file__
