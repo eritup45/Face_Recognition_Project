@@ -219,19 +219,19 @@ def detection_results(user_profiles, prev_locations, prev_encodings,
 
 
 # Insert measure into database
-def insert_measure(result: RecognitionResult, db_name):
+def insert_measure(result: RecognitionResult, db_name, Machine_id):
     data = fetch_newest_temperature_db(db_name)
-    measure_info_profile = [result.person_id] + list(data)
+    measure_info_profile = [result.person_id] + list(data) + list(Machine_id)
     Insert_Measure_Info(db_name, measure_info_profile)
 
 
 # 若根據偵測時間判斷為新的人，將資料寫進資料庫
 def record_new_measures(time_dict, now, results: List[RecognitionResult],
-                        db_name):
+                        db_name, Machine_id):
     new_results = [x for x in results
                    if is_new_person(time_dict, x.person_id, now)]
     for result in new_results:
-        insert_measure(result, db_name)
+        insert_measure(result, db_name, Machine_id)
 
 
 def frame_buffer_size(prev_times, now, buffer_duration, cpu_count):
@@ -258,6 +258,7 @@ def main():
     # execute_FLIR()
 
     database_name = './Release/teacher.db'
+    Machine_id = '0'    # TODO: change to parameter form
     tolerance = 0.38
     min_matched_ratio = 0.3
     buffer_duration = 2  # Frames within this duration will be buffered
@@ -360,7 +361,7 @@ def main():
             if new_results is not None:
                 results = new_results
             now = dt.datetime.now()
-            record_new_measures(time_dict, now, results, database_name)
+            record_new_measures(time_dict, now, results, database_name, Machine_id)
             for result in results:
                 time_dict[result.person_id] = now
 

@@ -11,15 +11,16 @@ def Insert_Measure_Info(database, info):
     Temp = str(info[2])
     Status = str(info[3])
     Temp_Index = str(info[4])
+    Machine_id = str(info[5])
     conn = sqlite3.connect(dirname)
     c = conn.cursor()
     c.execute("INSERT INTO Measure_Info (ID, Date, Temp, Status, Temp_Index) \
-                    VALUES ('{}', '{}', '{}', '{}', '{}')".format(ID, Date, Temp, Status, Temp_Index))
+                    VALUES ('{}', '{}', '{}', '{}', '{}', '{}')".format(ID, Date, Temp, Status, Temp_Index, Machine_id))
     conn.commit()
     conn.close()
 
 
 if __name__ == '__main__':
     database = 'teacher.db'
-    info = ['A123456789', '2020-03-04 17:31:18.587212', 'N', 'N', 'N']
+    info = ['A123456789', '2020-03-04 17:31:18.587212', 'N', 'N', 'N', '0']
     Insert_Measure_Info(database, info)

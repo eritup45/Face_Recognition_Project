@@ -76,7 +76,8 @@ def write_face_encodings_in_db(database, img_directory, excel_file):
             ID TEXT,\
                 Date TEXT,\
                     Temp REAL,\
-                        Status INTEGER)")
+                        Status INTEGER\
+                            Machine_id TEXT)")
 
     # 載入圖片
     profile_list = read_excel(excel_file)
